@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:38:58 by cchabeau          #+#    #+#             */
-/*   Updated: 2022/10/20 12:24:30 by cchabeau         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:30:56 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if ((ft_isalpha(c)) == 1)
+	if ((ft_isalpha(c)))
 	{
 		if (c <= 122 && c >= 97)
 			return (c);

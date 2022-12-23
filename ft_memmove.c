@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:25:30 by cchabeau          #+#    #+#             */
-/*   Updated: 2022/11/17 15:32:01 by cchabeau         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:29:41 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
-	if (dst == NULL && src == NULL)
+	if (!dst && !src)
 		return (0);
 	i = 0;
 	if (dst < src)
