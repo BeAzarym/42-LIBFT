@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:54:20 by cchabeau          #+#    #+#             */
-/*   Updated: 2022/12/19 12:50:58 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/02/21 11:52:04 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ static size_t	ft_count_word(char const *s, char c)
 	return (count);
 }
 
-static void	*ft_free_all_tab(char **strs, int i)
+static void	*ft_free_all_tab(char **strs, int size)
 {
-	while (--i >= 0)
-		free(strs[i]);
+	while (--size >= 0)
+		free(strs[size]);
 	free(strs);
 	return (NULL);
 }

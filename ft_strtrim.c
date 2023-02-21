@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:17:04 by cchabeau          #+#    #+#             */
-/*   Updated: 2022/11/07 17:54:10 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/02/21 13:30:58 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 static int	ft_isset(char const c, char const *set)
 {
-	size_t	i;
-
-	i = 0;
-	while (set[i] != '\0')
+	while (*set)
 	{
-		if (set[i] == c)
+		if (*set == c)
 			return (1);
-		i++;
+		set++;
 	}
 	return (0);
 }

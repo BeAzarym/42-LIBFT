@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:33:58 by cchabeau          #+#    #+#             */
-/*   Updated: 2022/10/22 21:34:29 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/02/21 11:59:10 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*result;
-	int		i;
+	char	*dup;
 	int		slen;
 
 	slen = ft_strlen(s);
-	result = malloc((sizeof(char) * slen) + 1);
-	if (!result)
+	dup = malloc(sizeof(char) * (slen + 1));
+	if (!dup)
 		return (NULL);
-	i = -1;
-	while (s[++i] != '\0')
-		result[i] = s[i];
-	result[i] = '\0';
-	return (result);
+	while (*s != '\0')
+		*dup++ = *s++;
+	*dup = '\0';
+	return (dup - slen);
 }
