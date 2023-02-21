@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 11:38:49 by cchabeau          #+#    #+#             */
-/*   Updated: 2023/02/21 13:45:15 by cchabeau         ###   ########.fr       */
+/*   Created: 2023/02/21 13:38:16 by cchabeau          #+#    #+#             */
+/*   Updated: 2023/02/21 13:48:20 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_islower(int c)
 {
-	if (ft_islower(c) || ft_isupper(c))
+	if (c >= 97 && c <= 122)
 		return (1);
 	return (0);
 }
