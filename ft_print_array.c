@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_print_array.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 23:38:44 by cchabeau          #+#    #+#             */
-/*   Updated: 2023/03/30 21:32:14 by cchabeau         ###   ########.fr       */
+/*   Created: 2023/04/29 17:59:55 by cchabeau          #+#    #+#             */
+/*   Updated: 2023/05/01 18:54:45 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_print_array(char **array)
 {
-	if (!s || fd < 0)
+	if (!array)
 		return ;
-	write(fd, s, ft_strlen(s));
+	while (*array != NULL)
+	{
+		ft_printf("->	%s", *array);
+		array++;
+	}
 }

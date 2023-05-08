@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:10:00 by cchabeau          #+#    #+#             */
-/*   Updated: 2023/02/24 19:21:08 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/05/08 14:54:13 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,7 @@ size_t	ft_convert(char type, va_list ap);
 int		ft_print_char(char c);
 int		ft_printf(const char *format, ...);
 char	*get_next_line(int fd);
+void	ft_print_array(char **array);
+char	**ft_arraydup(char **array, int size);
 
 #endif
