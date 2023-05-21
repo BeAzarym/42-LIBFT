@@ -39,27 +39,27 @@ SRCS	=	ft_atoi.c \
 					ft_printf_utils.c \
 					ft_printf.c \
 					get_next_line.c \
-					ft_arraydup.c \
-					ft_print_array.c \
-
-SRCS_BONUS = ft_lstnew_bonus.c \
-					ft_lstadd_front_bonus.c \
-					ft_lstadd_back_bonus.c \
-					ft_lstclear_bonus.c \
-					ft_lstdelone_bonus.c \
-					ft_lstiter_bonus.c \
-					ft_lstlast_bonus.c \
-					ft_lstmap_bonus.c \
-					ft_lstnew_bonus.c \
-					ft_lstsize_bonus.c \
-					
-
+					ft_array_dup.c \
+					ft_array_print.c \
+					ft_array_clear.c \
+					ft_array_join.c \
+					ft_strjoin_array.c \
+					ft_arraylen.c \
+					ft_free.c \
+					ft_lstnew.c \
+					ft_lstadd_front.c \
+					ft_lstadd_back.c \
+					ft_lstclear.c \
+					ft_lstdelone.c \
+					ft_lstiter.c \
+					ft_lstlast.c \
+					ft_lstmap.c \
+					ft_lstnew.c \
+					ft_lstsize.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 CC	=	gcc
 
@@ -70,18 +70,15 @@ RM	=	@rm -fr
 
 all:	$(NAME)
 
-bonus: $(OBJS) $(OBJS_BONUS)
-		ar -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
-
 $(NAME):	$(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean:	clean
 	$(RM) $(NAME)
 
 re:	fclean all
 
-.PHONY:	all re clean fclean bonus
+.PHONY:	all re clean fclean
