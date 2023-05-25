@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:52:19 by cchabeau          #+#    #+#             */
-/*   Updated: 2023/05/21 12:14:19 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/05/25 17:28:06 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strjoin_s1(char *s1, char *s2)
 		return (NULL);
 	while (*s1)
 		*str++ = *s1++;
-	ft_free(s1 - len_s1);
+	free(s1 - len_s1);
 	while (*s2)
 		*str++ = *s2++;
 	*str = '\0';
@@ -70,7 +70,7 @@ char	*ft_strjoin_s2(char *s1, char *s2)
 		*str++ = *s1++;
 	while (*s2)
 		*str++ = *s2++;
-	ft_free(s2 - len_s2);
+	free(s2 - len_s2);
 	*str = '\0';
 	return (str - len);
 }
@@ -92,10 +92,10 @@ char	*ft_strjoin_all(char *s1, char *s2)
 		return (NULL);
 	while (*s1)
 		*str++ = *s1++;
-	ft_free(s1 - len_s1);
+	free(s1 - len_s1);
 	while (*s2)
 		*str++ = *s2++;
-	ft_free(s2 - len_s2);
+	free(s2 - len_s2);
 	*str = '\0';
 	return (str - len);
 }

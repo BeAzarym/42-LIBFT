@@ -6,7 +6,7 @@
 /*   By: cchabeau <cchabeau@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:38:16 by cchabeau          #+#    #+#             */
-/*   Updated: 2023/05/19 13:53:47 by cchabeau         ###   ########.fr       */
+/*   Updated: 2023/05/25 17:27:47 by cchabeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_array_clear(char **array)
 		i++;
 	while (i >= 0)
 	{
-		ft_free(array[i]);
+		free(array[i]);
 		i--;
 	}
-	ft_free(array);
+	free(array);
 }
